@@ -12,6 +12,10 @@ Undergraduate in cyber security, building security tooling around LLM agents —
 
 重点不在「让模型会用工具」，而在于**怎么让它在不该动手的时候停下来**：工具分级、目标白名单、fail-closed 审批、全链路审计。项目里的 `policy.py` 比我写的任何扫描逻辑都长，这是刻意的。
 
+**[netioc](https://github.com/RicardoMLu777/netioc)** — 零依赖的 pcap IOC 提取器。DNS 域名、HTTP Host/URI、TLS SNI、外部地址，纯标准库，可以直接嵌进应急响应脚本或 CI。
+
+写它的原因是：想回答「这台机器连过谁」的时候，装 scapy 或 tshark 的代价太大。另外刻意把「跳过了什么包、为什么跳过」做成输出的一部分——安全工具最坏的失败模式是静默地什么都没报，让人误以为干净。
+
 **毕业设计** — 医疗编码（ICD-10 / DRG 3.0）映射系统的设计与实现，涉及数据分级、字段脱敏与操作审计。答辩后开源。
 
 ## 关注的方向
@@ -35,6 +39,7 @@ AI Agent 安全     自主系统的权限边界、工具调用策略门控、pro
 | 项目 | 说明 |
 |---|---|
 | [**secagent**](https://github.com/RicardoMLu777/secagent) | MCP-based autonomous security assessment agent. Explicit planning, parallel tool calls, tiered memory, MITRE ATT&CK mapping, policy-gated execution. |
+| [**netioc**](https://github.com/RicardoMLu777/netioc) | Zero-dependency IOC extraction from packet captures — DNS names, HTTP hosts/URIs, TLS SNI, external addresses. |
 | *毕业设计* | ICD-10 / DRG 3.0 编码映射原型系统（2027 公开） |
 
 ## 联系
